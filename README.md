@@ -3,9 +3,9 @@
 These are my answers for public interview questions
 
 ## Languages
-*HTML
-*CSS
-*JavaScript
+* HTML
+* CSS
+* JavaScript
 
 ## Sources
 https://www.testdome.com
