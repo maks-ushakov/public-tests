@@ -7,12 +7,19 @@ describe('Ensure', function () {
 		expect(ensure(false)).to.be.false;
 	});
 
-	it('Throw Error if no arguments', function () {
-		expect(ensure()).to.throw(Error);
+	describe('Errors', function () {
+		it('Can Throw Error', function () {
+			expect(ensure).to.throw(Error);
+		});
+
+		it('Throw Error if no arguments', function () {
+			assert.throws(function() { ensure(); }, Error);
+		});
+
+		it('Throw Error for undefined value', function () {
+			var tmp;
+			assert.throws(function () { ensure(tmp); }, Error );
+		});
 	});
 
-	it('Throw Error for undefined value', function () {
-		var tmp;
-		expect(ensure(tmp)).to.throw(Error);
-	});
 });
