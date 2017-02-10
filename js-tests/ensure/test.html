@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, maximum-scale=1, target-densityDPI=device-dpi"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>Ensure. Error Question</title>
+		<style>
+			body {
+				background-color: #cde;
+			}
+			#wrapper {
+				max-width: 1000px;
+				margin: 0 auto;
+				background-color: #fff;
+				box-shadow: 3px 3px 10px 0 rgba(0,0,0, .4);
+				min-height: 100px;
+				position: relative;
+				padding-bottom: 20px;
+			}
+			#header {
+				padding: 20px 5px;
+				background-color: #fde;
+			}
+			#mocha-stats {
+				position: absolute !important;
+			}
+		</style>
+		<!--[if lte IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/lte9.css" media="screen"/>
+		<![endif]-->
+		<!-- подключаем стили Mocha, для отображения результатов -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+  <!-- подключаем библиотеку Mocha -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+  <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+  <script>
+    mocha.setup('bdd');
+  </script>
+
+  <!-- подключаем chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+  <!-- в chai есть много всего, выносим assert в глобальную область -->
+  <script>
+    var assert = chai.assert;
+  </script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header id="header">
+				<h1>Ensure. Errors</h1>
+			</header>
+
+
+  <!-- в элементе с id="mocha" будут результаты тестов -->
+  <div id="mocha"></div>
+
+  <!-- запустить тесты! -->
+  <!-- в этом скрипте находятся разрабатывемые функции -->
+  		<script src="answer.js"></script>
+		<!-- в этом скрипте находятся спеки -->
+  		<script src="test.js"></script>
+  		<script>
+    		mocha.run();
+  		</script>
+
+		</div>
+		
+	</body>
+</html>
