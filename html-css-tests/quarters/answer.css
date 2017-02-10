@@ -1,0 +1,28 @@
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	font-size: 20px;
+}
+
+article {
+	float: left;
+	width: 50%;
+	height: 50%;
+	background-color: blue;
+}
+
+article:first-child {
+	background-color: red;
+}
+
+article:nth-child(2n) {
+	background-color: yellow;
+}
+
+article:last-child {
+	background-color: green;
+}
