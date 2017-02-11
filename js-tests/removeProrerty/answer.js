@@ -1,3 +1,9 @@
 function removeProperty(obj, prop) {
-  return null;
+	if(typeof(obj) === 'object' &&
+	   typeof(prop) !== 'undefined' &&
+			(prop in obj)) {
+		delete obj[prop];
+		return true;
+	}
+  return false;
 }
